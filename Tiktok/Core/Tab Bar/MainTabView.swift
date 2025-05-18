@@ -13,7 +13,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Feed")
+            FeedView()
                 .tabItem {
                     VStack {
                         Image(systemName: "house")
