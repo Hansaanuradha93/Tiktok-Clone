@@ -11,7 +11,7 @@ struct FeedView: View {
     @StateObject var viewModel = FeedViewModel()
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 0) {
+            LazyVStack {
                 ForEach(viewModel.posts) { post in
                     FeedCell(post: post)
                 }

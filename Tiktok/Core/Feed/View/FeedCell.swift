@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct FeedCell: View {
     let post: Post
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(Color.pink)
+            VideoPlayer(player: AVPlayer(url: post.url))
                 .containerRelativeFrame([.horizontal, .vertical])
             
             VStack {

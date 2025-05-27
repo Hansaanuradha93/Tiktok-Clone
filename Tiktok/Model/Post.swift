@@ -10,4 +10,8 @@ import Foundation
 struct Post: Identifiable, Codable {
     let id: String
     let videoUrl: String
+    
+    var url: URL {
+        return URL(string: videoUrl)!
+    }
 }
